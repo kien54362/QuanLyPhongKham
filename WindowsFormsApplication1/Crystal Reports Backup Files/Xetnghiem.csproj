@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58321603-B8DB-4D3C-90F6-A3B8F9FF8DCD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net461\zxing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net461\zxing.presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystalReportINBARCODE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportINBARCODE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReportINKETQUAXETNGHIEM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportINKETQUAXETNGHIEM.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportINKHACHHANG.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportINKHACHHANG.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportTHONGKEXETNGHIEM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportTHONGKEXETNGHIEM.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dangnhap.Designer.cs">
+      <DependentUpon>dangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\BENHNHANDAO.cs" />
+    <Compile Include="DAO\KNCSDL.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="DataSetINKETQUAXETNGHIEM.cs">
+      <DependentUpon>DataSetINKETQUAXETNGHIEM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetINKETQUAXETNGHIEM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetINKETQUAXETNGHIEM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetINKHACHHANG.cs">
+      <DependentUpon>DataSetINKHACHHANG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetINKHACHHANG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetINKHACHHANG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTAOMABARCODE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTAOMABARCODE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTHONGKEXN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTHONGKEXN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\BENHNHANDTO.cs" />
+    <Compile Include="Excel.cs" />
+    <Compile Include="FormIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIN.Designer.cs">
+      <DependentUpon>FormIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Doimk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Doimk.Designer.cs">
+      <DependentUpon>FRM_Doimk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Doimk2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Doimk2.Designer.cs">
+      <DependentUpon>FRM_Doimk2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Doimk3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Doimk3.Designer.cs">
+      <DependentUpon>FRM_Doimk3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_inbarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_inbarcode.Designer.cs">
+      <DependentUpon>FRM_inbarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_nhanvien.Designer.cs">
+      <DependentUpon>FRM_nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_quanlythanhtoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_quanlythanhtoan.Designer.cs">
+      <DependentUpon>FRM_quanlythanhtoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_quanlythanhtoan_hinhthucthanhtoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_quanlythanhtoan_hinhthucthanhtoan.Designer.cs">
+      <DependentUpon>FRM_quanlythanhtoan_hinhthucthanhtoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_quanlythanhtoan_inhoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_quanlythanhtoan_inhoadon.Designer.cs">
+      <DependentUpon>FRM_quanlythanhtoan_inhoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_quanlythanhtoan_tinhtien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_quanlythanhtoan_tinhtien.Designer.cs">
+      <DependentUpon>FRM_quanlythanhtoan_tinhtien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_quanlythietbi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_quanlythietbi.Designer.cs">
+      <DependentUpon>FRM_quanlythietbi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_thanhtoanmomo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_thanhtoanmomo.Designer.cs">
+      <DependentUpon>FRM_thanhtoanmomo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_thongkexetnghiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_thongkexetnghiem.Designer.cs">
+      <DependentUpon>FRM_thongkexetnghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_trangchu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_trangchu.Designer.cs">
+      <DependentUpon>FRM_trangchu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Trangchu2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Trangchu2.Designer.cs">
+      <DependentUpon>FRM_Trangchu2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Trangchu3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Trangchu3.Designer.cs">
+      <DependentUpon>FRM_Trangchu3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Xetnghiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Xetnghiem.Designer.cs">
+      <DependentUpon>FRM_Xetnghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INKETQUAXETNGHIEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INKETQUAXETNGHIEM.Designer.cs">
+      <DependentUpon>INKETQUAXETNGHIEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLPKTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLPKTDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLPKTDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLPKTDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="xetnghiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xetnghiem.Designer.cs">
+      <DependentUpon>xetnghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrystalReportINBARCODE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportINBARCODE.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportINKETQUAXETNGHIEM.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportINKETQUAXETNGHIEM.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportINKHACHHANG.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportINKHACHHANG.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportTHONGKEXETNGHIEM.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportTHONGKEXETNGHIEM.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dangnhap.resx">
+      <DependentUpon>dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIN.resx">
+      <DependentUpon>FormIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Doimk.resx">
+      <DependentUpon>FRM_Doimk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Doimk2.resx">
+      <DependentUpon>FRM_Doimk2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Doimk3.resx">
+      <DependentUpon>FRM_Doimk3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_inbarcode.resx">
+      <DependentUpon>FRM_inbarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_nhanvien.resx">
+      <DependentUpon>FRM_nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_quanlythanhtoan.resx">
+      <DependentUpon>FRM_quanlythanhtoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_quanlythanhtoan_hinhthucthanhtoan.resx">
+      <DependentUpon>FRM_quanlythanhtoan_hinhthucthanhtoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_quanlythanhtoan_inhoadon.resx">
+      <DependentUpon>FRM_quanlythanhtoan_inhoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_quanlythanhtoan_tinhtien.resx">
+      <DependentUpon>FRM_quanlythanhtoan_tinhtien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_quanlythietbi.resx">
+      <DependentUpon>FRM_quanlythietbi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_thanhtoanmomo.resx">
+      <DependentUpon>FRM_thanhtoanmomo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_thongkexetnghiem.resx">
+      <DependentUpon>FRM_thongkexetnghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_trangchu.resx">
+      <DependentUpon>FRM_trangchu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Trangchu2.resx">
+      <DependentUpon>FRM_Trangchu2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Trangchu3.resx">
+      <DependentUpon>FRM_Trangchu3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Xetnghiem.resx">
+      <DependentUpon>FRM_Xetnghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INKETQUAXETNGHIEM.resx">
+      <DependentUpon>INKETQUAXETNGHIEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xetnghiem.resx">
+      <DependentUpon>xetnghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DataSetINKETQUAXETNGHIEM.xsc">
+      <DependentUpon>DataSetINKETQUAXETNGHIEM.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetINKETQUAXETNGHIEM.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetINKETQUAXETNGHIEM.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetINKETQUAXETNGHIEM.xss">
+      <DependentUpon>DataSetINKETQUAXETNGHIEM.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetINKHACHHANG.xsc">
+      <DependentUpon>DataSetINKHACHHANG.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetINKHACHHANG.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetINKHACHHANG.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetINKHACHHANG.xss">
+      <DependentUpon>DataSetINKHACHHANG.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTAOMABARCODE.xsc">
+      <DependentUpon>DataSetTAOMABARCODE.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTAOMABARCODE.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTAOMABARCODE.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTAOMABARCODE.xss">
+      <DependentUpon>DataSetTAOMABARCODE.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTHONGKEXN.xsc">
+      <DependentUpon>DataSetTHONGKEXN.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTHONGKEXN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTHONGKEXN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTHONGKEXN.xss">
+      <DependentUpon>DataSetTHONGKEXN.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QLPKTDataSet.xsc">
+      <DependentUpon>QLPKTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLPKTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLPKTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLPKTDataSet.xss">
+      <DependentUpon>QLPKTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLPKTDataSet1.xsc">
+      <DependentUpon>QLPKTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLPKTDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLPKTDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLPKTDataSet1.xss">
+      <DependentUpon>QLPKTDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BUS\" />
+    <Folder Include="GUI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\logo_momo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ANH\LOGO.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

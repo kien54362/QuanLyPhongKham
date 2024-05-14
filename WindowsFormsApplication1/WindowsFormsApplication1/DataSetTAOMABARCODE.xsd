@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetTAOMABARCODE" targetNamespace="http://tempuri.org/DataSetTAOMABARCODE.xsd" xmlns:mstns="http://tempuri.org/DataSetTAOMABARCODE.xsd" xmlns="http://tempuri.org/DataSetTAOMABARCODE.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetTAOMABARCODE" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetTAOMABARCODE" msprop:Generator_UserDSName="DataSetTAOMABARCODE">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BARCODE" msprop:Generator_TableClassName="BARCODEDataTable" msprop:Generator_TableVarName="tableBARCODE" msprop:Generator_TablePropName="BARCODE" msprop:Generator_RowDeletingName="BARCODERowDeleting" msprop:Generator_RowChangingName="BARCODERowChanging" msprop:Generator_RowEvHandlerName="BARCODERowChangeEventHandler" msprop:Generator_RowDeletedName="BARCODERowDeleted" msprop:Generator_UserTableName="BARCODE" msprop:Generator_RowChangedName="BARCODERowChanged" msprop:Generator_RowEvArgName="BARCODERowChangeEvent" msprop:Generator_RowClassName="BARCODERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Hoten" msprop:Generator_ColumnVarNameInTable="columnHoten" msprop:Generator_ColumnPropNameInRow="Hoten" msprop:Generator_ColumnPropNameInTable="HotenColumn" msprop:Generator_UserColumnName="Hoten" type="xs:string" minOccurs="0" />
+              <xs:element name="MaBN" msprop:Generator_ColumnVarNameInTable="columnMaBN" msprop:Generator_ColumnPropNameInRow="MaBN" msprop:Generator_ColumnPropNameInTable="MaBNColumn" msprop:Generator_UserColumnName="MaBN" type="xs:string" minOccurs="0" />
+              <xs:element name="NgayXN" msprop:Generator_ColumnVarNameInTable="columnNgayXN" msprop:Generator_ColumnPropNameInRow="NgayXN" msprop:Generator_ColumnPropNameInTable="NgayXNColumn" msprop:Generator_UserColumnName="NgayXN" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
